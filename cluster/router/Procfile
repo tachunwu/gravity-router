@@ -1,0 +1,10 @@
+router:  ./../../nats-server -p=4222 --cluster=nats://localhost:6222 --routes=nats://localhost:6223,nats://localhost:6224,nats://localhost:6225,nats://localhost:6226,nats://localhost:6227,nats://localhost:6228,nats://localhost:6229,nats://localhost:6230,nats://localhost:6231
+shard-0: ./../../nats-server -DV -p=4223 --cluster=nats://localhost:6223 --server_name=shard-0
+shard-1: ./../../nats-server -DV -p=4224 --cluster=nats://localhost:6224 --server_name=shard-1
+shard-2: ./../../nats-server -DV -p=4225 --cluster=nats://localhost:6225 --server_name=shard-2
+shard-3: ./../../nats-server -DV -p=4226 --cluster=nats://localhost:6226 --server_name=shard-3
+shard-4: ./../../nats-server -DV -p=4227 --cluster=nats://localhost:6227 --server_name=shard-4
+shard-5: ./../../nats-server -DV -p=4228 --cluster=nats://localhost:6228 --server_name=shard-5
+shard-6: ./../../nats-server -DV -p=4229 --cluster=nats://localhost:6229 --server_name=shard-6
+shard-7: ./../../nats-server -DV -p=4230 --cluster=nats://localhost:6230 --server_name=shard-7 
+shard-8: ./../../nats-server -DV -p=4231 --cluster=nats://localhost:6231 --server_name=shard-8
