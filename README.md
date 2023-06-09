@@ -51,6 +51,7 @@ Leaf Layer 單純是獨立的 In-memory 負責儲存 Cache 的資料，原始論
 ![](./asserts/write.svg)
 
 ## Implementation Details
+![](./asserts/implement.png)
 ### gravity-router
 gravity-router 用 NATS 作為 Interface，client 端操作就像操作一個 local 的 HashMap，將請求發到 NATS Subject 上，舉例來說: graivty-router 提供 ```Get(), Set(), Del()``` 等方法，Subject 本身是 Key，Message 的 Payload 是 Value，```nats.Msg{}``` 的 Header 夾帶 ```op``` 來表明這是什麼操作。一個 gravity-router 通常會連接多個 leaf cache instance，啟動的時候用 cluster route 把 leaf 的連線資訊傳入 gravity-router，並且用 watch 監聽變化。
 ### cache
