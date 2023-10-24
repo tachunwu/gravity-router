@@ -91,4 +91,4 @@ func main() {
 * [Deploying Memcached on GKE](https://cloud.google.com/kubernetes-engine/docs/tutorials/deploying-memcached-on-kubernetes-engine)
 
 ## Auther
-Tachun Wu <tachun@bribridge.com>
+Tachun Wu <tachunwu.go@gmail.com>
